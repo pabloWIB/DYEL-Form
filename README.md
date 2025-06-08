@@ -51,7 +51,7 @@ Estos principios reflejan nuestra dedicación a la preparación, adaptabilidad y
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/usuario/dyel-project.git
+git clone https://github.com/pabloWIB/DYEL-Form.git
 
 # Navegar al directorio del proyecto
 cd dyel-project
