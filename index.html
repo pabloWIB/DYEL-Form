@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Selecciona tus imagenes y crea un portafolio publico para tus amigos">
   <meta name="author" content="Pablo Nieto Perez">
   <meta name="keywords" content="Imagenes, galeria, contenido, favoritos">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minumin-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minumin-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" type="text/css" href="estilos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
-    <script src="funciones.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="funciones.js"></script>
+  <link rel="icon" type="image/x-icon" href="DYEL-Form.png">
 </head>
+
 <body>
   <nav class="navbar">
-      <button onclick="toggleMenu()" class="burger"></button>
-      <button class="button">INICIO</button>
-      <div class="dropdowns">
-        <div class="dropdown">
-          <button class="button">
-            Servicios
-            <img src="IMG/chevron.svg" />
-          </button>
-          <div class="dropdown-menu">
-            <button>Contacto</button>
-            <button>Ubicación</button>
-            <button>Telefóno</button>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="button">
-            Productos
-            <img src="IMG/chevron.svg" />
-          </button>
-          <div class="dropdown-menu">
-            <button>Cursos</button>
-            <button>Tutorias</button>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="button">
-            Soporte
-            <img src="IMG/chev.svg" />
-          </button>
-          <div class="dropdown-menu">
-            <button>Chat</button>
-            <button>Email</button>
-            <button>Nuestras redes</button>
-          </div>
+    <button onclick="toggleMenu()" class="burger"></button>
+    <button class="button">INICIO</button>
+    <div class="dropdowns">
+      <div class="dropdown">
+        <button class="button">
+          Servicios
+          <img src="IMG/chevron.svg" />
+        </button>
+        <div class="dropdown-menu">
+          <button>Contacto</button>
+          <button>Ubicación</button>
+          <button>Telefóno</button>
         </div>
       </div>
-    </nav>
-    <section class="DisplaySM">
+      <div class="dropdown">
+        <button class="button">
+          Productos
+          <img src="IMG/chevron.svg" />
+        </button>
+        <div class="dropdown-menu">
+          <button>Cursos</button>
+          <button>Tutorias</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="button">
+          Soporte
+          <img src="IMG/chev.svg" />
+        </button>
+        <div class="dropdown-menu">
+          <button>Chat</button>
+          <button>Email</button>
+          <button>Nuestras redes</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="DisplaySM">
     <div>
       <img class="img1" src="ICONOS/facebook.svg" alt="">
     </div>
@@ -66,83 +70,91 @@
       <img class="img1" src="ICONOS/tiktok.svg" alt="">
     </div>
   </section>
-    <div class="SpaceBetween"></div>
-    <div class="parent-div">
-        <div class="content-contenedor-iniciar">
-          <figure><img class="reductionIMG1" onclick="IMGbig();" src="IMG/BUHO.jpg"></figure>
-          <h1 class="title" >DYEL</h1>
-          <section class="placing">
-            <button class="buttons"  onclick="toggleModalIngresar();"  type="button">INGRESAR</button>
-            <button class="buttons"  onclick="toggleModalRegistrar();" type="button">REGISTRARSE</button>
-          </section>
-        </div>
-        <div class="content-div">
-          <hgroup >
-            <h3>DYEL</h3>
-            <h4>Iniciar Sesión</h4>
-          </hgroup>
-           <form class="form-information">
-             <input type="Email" name="email" placeholder=" Ingresa tu Correo" maxlength="15" required>
-             <input type="password" name="password" placeholder=" Ingreas tu Contraseña" maxlength="15" required>
-             <input type="submit" name="enviar">
-             <a href="#">¿Olvidaste tu contraseña?</a>
-           </form>
-           <section class="place-regresar" >
-            <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalIngresar();" type="button">REGRESAR</button>
-           </section>
-        </div>
-        <div class="content2-div">
-          <br>
-          <form >
-            <hgroup>
-            <h3>DYEL</h3>
-            <h4>Crea tu Cuenta</h4>
-          </hgroup>
-           <form class="form-information">
-             <input type="Email" name="email" placeholder=" Agrega tu Correo" maxlength="15" required>
-             <input type="password" name="password" placeholder=" Agrega tu Contraseña" maxlength="15" required>
-             <input type="tel" name="Telefóno" placeholder=" Agrega tu teléfono" maxlength="9" required><br><br>
-             <input type="submit" name="enviar">
-           </form>
-           <section class="place-regresar" >
-            <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalRegistrar();" type="button">REGRESAR</button>
-           </section>
-        </div>
+  <div class="SpaceBetween"></div>
+  <div class="parent-div">
+    <div class="content-contenedor-iniciar">
+      <figure><img class="reductionIMG1" onclick="IMGbig();" src="IMG/BUHO.jpg"></figure>
+      <h1 class="title">DYEL</h1>
+      <section class="placing">
+        <button class="buttons" onclick="toggleModalIngresar();" type="button">INGRESAR</button>
+        <button class="buttons" onclick="toggleModalRegistrar();" type="button">REGISTRARSE</button>
+      </section>
     </div>
-    <div class="SpaceBetween"></div>
-   <div class="Cont-imgs">
-      <div>
-        <figure class="Positions-first" onclick="toggleModalExpandir();" ><img class="reductionContent Hover" src="IMG/1.jpg"></figure>
-        <figcaption>"It can be joy or sorrow, but either way. you have to be prepared"</figcaption>
-      </div>
+    <div class="content-div">
+      <hgroup>
+        <h3>DYEL</h3>
+        <h4>Iniciar Sesión</h4>
+      </hgroup>
+      <form class="form-information">
+        <input type="Email" name="email" placeholder=" Ingresa tu Correo" maxlength="15" required>
+        <input type="password" name="password" placeholder=" Ingreas tu Contraseña" maxlength="15" required>
+        <input type="submit" name="enviar">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </form>
+      <section class="place-regresar">
+        <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalIngresar();"
+          type="button">REGRESAR</button>
+      </section>
     </div>
-    <div class="Cont-imgs2">
-      <div>
-        <figure onclick="toggleModalExpandir();" class="Positions-second" ><img class="reductionContent " src="IMG/3.jpg"></figure>
-      </div>
-    </div> 
-    <div class="Cont-imgs3">
-      <div>
-        <figure class="Positions-first2" onclick="toggleModalExpandir2();"><img class="reductionContent Hover" src="IMG/4.jpg"></figure>
-        <figcaption>"Unexpected, Always be prepared."</figcaption>
-      </div>
+    <div class="content2-div">
+      <br>
+      <form>
+        <hgroup>
+          <h3>DYEL</h3>
+          <h4>Crea tu Cuenta</h4>
+        </hgroup>
+        <form class="form-information">
+          <input type="Email" name="email" placeholder=" Agrega tu Correo" maxlength="15" required>
+          <input type="password" name="password" placeholder=" Agrega tu Contraseña" maxlength="15" required>
+          <input type="tel" name="Telefóno" placeholder=" Agrega tu teléfono" maxlength="9" required><br><br>
+          <input type="submit" name="enviar">
+        </form>
+        <section class="place-regresar">
+          <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalRegistrar();"
+            type="button">REGRESAR</button>
+        </section>
     </div>
-    <div class="Cont-imgs4">
-      <div >
-        <figure onclick="toggleModalExpandir2();"class="Positions-second2"><img class="reductionContent " src="IMG/5.jpg"></figure>
-      </div>
-    </div> 
-    <div class="Cont-imgs4">
-      <div>
-        <figure class="Positions-first3" onclick="toggleModalExpandir3();"><img class="reductionContent Hover" src="IMG/6.jpg"></figure>
-        <figcaption>"Do not be surprised by an unusual event. Anything could happen, and probably will"</figcaption>
-      </div>
+  </div>
+  <div class="SpaceBetween"></div>
+  <div class="Cont-imgs">
+    <div>
+      <figure class="Positions-first" onclick="toggleModalExpandir();"><img class="reductionContent Hover"
+          src="IMG/1.jpg"></figure>
+      <figcaption>"It can be joy or sorrow, but either way. you have to be prepared"</figcaption>
     </div>
-    <div class="Cont-imgs5">
-      <div>
-        <figure onclick="toggleModalExpandir3();"class="Positions-second3"><img class="reductionContent" src="IMG/1.jpg"></figure>
-      </div>
-    </div>  
+  </div>
+  <div class="Cont-imgs2">
+    <div>
+      <figure onclick="toggleModalExpandir();" class="Positions-second"><img class="reductionContent " src="IMG/3.jpg">
+      </figure>
+    </div>
+  </div>
+  <div class="Cont-imgs3">
+    <div>
+      <figure class="Positions-first2" onclick="toggleModalExpandir2();"><img class="reductionContent Hover"
+          src="IMG/4.jpg"></figure>
+      <figcaption>"Unexpected, Always be prepared."</figcaption>
+    </div>
+  </div>
+  <div class="Cont-imgs4">
+    <div>
+      <figure onclick="toggleModalExpandir2();" class="Positions-second2"><img class="reductionContent "
+          src="IMG/5.jpg"></figure>
+    </div>
+  </div>
+  <div class="Cont-imgs4">
+    <div>
+      <figure class="Positions-first3" onclick="toggleModalExpandir3();"><img class="reductionContent Hover"
+          src="IMG/6.jpg"></figure>
+      <figcaption>"Do not be surprised by an unusual event. Anything could happen, and probably will"</figcaption>
+    </div>
+  </div>
+  <div class="Cont-imgs5">
+    <div>
+      <figure onclick="toggleModalExpandir3();" class="Positions-second3"><img class="reductionContent" src="IMG/1.jpg">
+      </figure>
+    </div>
+  </div>
   <script type="text/javascript">
     const toggleModalIngresar = () => document.body.classList.toggle("open");
     const toggleModalRegistrar = () => document.body.classList.toggle("openRe")
@@ -154,4 +166,5 @@
     const toggleMenu = () => document.body.classList.toggle("openNav");
   </script>
 </body>
+
 </html>
