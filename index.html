@@ -1,170 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Selecciona tus imagenes y crea un portafolio publico para tus amigos">
-  <meta name="author" content="Pablo Nieto Perez">
-  <meta name="keywords" content="Imagenes, galeria, contenido, favoritos">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minumin-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" type="text/css" href="estilos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script src="funciones.js"></script>
-  <link rel="icon" type="image/x-icon" href="DYEL-Form.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Built by Pablo Nieto Pérez — wib.digital
+       Need changes or a new build? https://www.fiverr.com/pablonietop -->
+  <meta name="author" content="Pablo Nieto Pérez — wib.digital">
+  <link rel="author" href="https://www.fiverr.com/pablonietop">
+
+  <title>DYEL — Crea un portafolio público con tus imágenes</title>
+  <meta name="description"
+    content="DYEL es una pantalla de acceso y registro para un portafolio público de imágenes. Demo de interfaz en HTML, CSS y JavaScript, sin dependencias ni compilación.">
+
+  <link rel="canonical" href="https://dyelform.wib.digital/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dyelform.wib.digital/">
+  <meta property="og:title" content="DYEL — Crea un portafolio público con tus imágenes">
+  <meta property="og:description"
+    content="Pantalla de acceso y registro para un portafolio público de imágenes. Demo de interfaz en HTML, CSS y JavaScript.">
+  <meta property="og:image" content="https://dyelform.wib.digital/assets/img/logo/og-dyel-form.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <script defer src="assets/js/modules/nav.js"></script>
+  <script defer src="assets/js/modules/auth.js"></script>
+  <script defer src="assets/js/modules/gallery.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pablo Nieto Pérez",
+    "url": "https://wib.digital",
+    "jobTitle": "Web Designer and Developer",
+    "sameAs": [
+      "https://www.fiverr.com/pablonietop",
+      "https://www.linkedin.com/in/pablo-nieto-perez-39a530292"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <nav class="navbar">
-    <button onclick="toggleMenu()" class="burger"></button>
-    <button class="button">INICIO</button>
-    <div class="dropdowns">
-      <div class="dropdown">
-        <button class="button">
-          Servicios
-          <img src="IMG/chevron.svg" />
-        </button>
-        <div class="dropdown-menu">
-          <button>Contacto</button>
-          <button>Ubicación</button>
-          <button>Telefóno</button>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio">
+        <img class="brand__mark" src="assets/img/logo/buho-geometrico.webp"
+          alt="Búho geométrico trazado con líneas rectas, marca de DYEL" width="32" height="32">
+        <span class="brand__name">DYEL</span>
+      </a>
+
+      <button class="burger" type="button" id="burger" aria-controls="menu-principal" aria-expanded="false">
+        <span class="burger__label">Menú</span>
+        <svg class="burger__icon burger__icon--open" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+        <svg class="burger__icon burger__icon--close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 5l14 14M19 5L5 19" />
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="site-nav__link" href="#acceso">Acceso</a></li>
+          <li><a class="site-nav__link" href="#galeria">Galería</a></li>
+          <li>
+            <a class="site-nav__link" href="https://github.com/pabloWIB/DYEL-Form" rel="noopener">
+              Código
+              <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <h1 class="hero__title">DYEL</h1>
+        <p class="hero__lead">
+          Elige tus imágenes y publica un portafolio que tus amigos pueden abrir con un enlace.
+        </p>
+        <a class="btn btn--primary" href="#acceso">Crear una cuenta</a>
+      </div>
+    </section>
+
+    <section class="section" id="acceso" aria-labelledby="acceso-titulo">
+      <div class="container">
+        <h2 class="section__title" id="acceso-titulo">Acceso</h2>
+        <p class="section__lead">
+          Así entra un usuario a DYEL. La interfaz valida los campos en el navegador y responde a cada
+          error, pero no hay servidor detrás: nada se envía ni se guarda.
+        </p>
+
+        <div class="auth" id="auth" data-panel="portada">
+
+          <div class="auth__panel" data-auth-panel="portada">
+            <img class="auth__mark" src="assets/img/logo/buho-geometrico.webp"
+              alt="Búho geométrico trazado con líneas rectas, marca de DYEL" width="72" height="72">
+            <h3 class="auth__title">DYEL</h3>
+            <p class="auth__subtitle">Tu portafolio de imágenes</p>
+            <div class="auth__actions">
+              <button class="btn btn--primary" type="button" data-auth-go="ingresar">Iniciar sesión</button>
+              <button class="btn btn--ghost" type="button" data-auth-go="registrar">Crear cuenta</button>
+            </div>
+          </div>
+
+          <div class="auth__panel" data-auth-panel="ingresar">
+            <h3 class="auth__title">Iniciar sesión</h3>
+            <p class="auth__subtitle">Entra con tu correo</p>
+
+            <form class="form" id="form-ingresar" novalidate>
+              <div class="field">
+                <label class="field__label" for="ingresar-email">Correo electrónico</label>
+                <input class="field__input" id="ingresar-email" name="email" type="email"
+                  autocomplete="email" required aria-describedby="ingresar-email-error">
+                <p class="field__error" id="ingresar-email-error" data-error-for="ingresar-email"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="ingresar-password">Contraseña</label>
+                <input class="field__input" id="ingresar-password" name="password" type="password"
+                  autocomplete="current-password" minlength="8" required
+                  aria-describedby="ingresar-password-error">
+                <p class="field__error" id="ingresar-password-error" data-error-for="ingresar-password"></p>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+              <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+            </form>
+
+            <button class="auth__back" type="button" data-auth-go="portada">Volver</button>
+          </div>
+
+          <div class="auth__panel" data-auth-panel="registrar">
+            <h3 class="auth__title">Crear cuenta</h3>
+            <p class="auth__subtitle">Necesitamos tres datos</p>
+
+            <form class="form" id="form-registrar" novalidate>
+              <div class="field">
+                <label class="field__label" for="registrar-email">Correo electrónico</label>
+                <input class="field__input" id="registrar-email" name="email" type="email"
+                  autocomplete="email" required aria-describedby="registrar-email-error">
+                <p class="field__error" id="registrar-email-error" data-error-for="registrar-email"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="registrar-password">Contraseña</label>
+                <input class="field__input" id="registrar-password" name="password" type="password"
+                  autocomplete="new-password" minlength="8" required
+                  aria-describedby="registrar-password-hint registrar-password-error">
+                <p class="field__hint" id="registrar-password-hint">Mínimo 8 caracteres.</p>
+                <p class="field__error" id="registrar-password-error" data-error-for="registrar-password"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="registrar-telefono">Teléfono</label>
+                <input class="field__input" id="registrar-telefono" name="telefono" type="tel"
+                  autocomplete="tel" inputmode="tel" required
+                  aria-describedby="registrar-telefono-hint registrar-telefono-error">
+                <p class="field__hint" id="registrar-telefono-hint">Entre 9 y 15 dígitos.</p>
+                <p class="field__error" id="registrar-telefono-error" data-error-for="registrar-telefono"></p>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">Crear cuenta</button>
+              <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+            </form>
+
+            <button class="auth__back" type="button" data-auth-go="portada">Volver</button>
+          </div>
+
         </div>
       </div>
-      <div class="dropdown">
-        <button class="button">
-          Productos
-          <img src="IMG/chevron.svg" />
-        </button>
-        <div class="dropdown-menu">
-          <button>Cursos</button>
-          <button>Tutorias</button>
-        </div>
+    </section>
+
+    <section class="section section--alt" id="galeria" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <h2 class="section__title" id="galeria-titulo">Galería de ejemplo</h2>
+        <p class="section__lead">
+          Un portafolio de DYEL se ve así: las piezas que el usuario ha elegido, en cuadrícula.
+          Pulsa cualquiera para verla completa.
+        </p>
+
+        <ul class="gallery">
+          <li class="gallery__item">
+            <button class="gallery__trigger" type="button"
+              data-full="assets/img/content/detalle-joy-or-sorrow.webp"
+              data-caption="«It can be joy or sorrow, but either way, you have to be prepared»">
+              <img class="gallery__img" src="assets/img/content/detalle-joy-or-sorrow.webp"
+                alt="Detalle de un cartel amarillo ácido con la frase «It can be joy or sorrow, but either way, you have to be prepared» en tipografía negra"
+                width="800" height="800" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li class="gallery__item">
+            <button class="gallery__trigger" type="button"
+              data-full="assets/img/content/detalle-the-unexpected.webp"
+              data-caption="Detalle de la palabra «Unexpected» y la firma del autor">
+              <img class="gallery__img" src="assets/img/content/detalle-the-unexpected.webp"
+                alt="Detalle del cartel con la palabra «THE» y una firma manuscrita sobre fondo amarillo ácido texturizado"
+                width="800" height="800" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li class="gallery__item gallery__item--wide">
+            <button class="gallery__trigger" type="button"
+              data-full="assets/img/content/cartel-expect-the-unexpected.webp"
+              data-caption="Cartel completo «Expect the Unexpected», Reuel 2022, pieza 208 de 365">
+              <img class="gallery__img" src="assets/img/content/cartel-expect-the-unexpected.webp"
+                alt="Cartel completo con el lema «Expect the Unexpected» en letras negras compactas sobre fondo amarillo ácido"
+                width="1200" height="1200" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li class="gallery__item">
+            <button class="gallery__trigger" type="button"
+              data-full="assets/img/content/detalle-unusual-event.webp"
+              data-caption="«To not be surprised by an unusual event. Anything could happen, and probably will.»">
+              <img class="gallery__img" src="assets/img/content/detalle-unusual-event.webp"
+                alt="Detalle del cartel con la frase «To not be surprised by an unusual event. Anything could happen, and probably will.»"
+                width="800" height="800" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li class="gallery__item">
+            <button class="gallery__trigger" type="button"
+              data-full="assets/img/content/detalle-sello-reuel.webp"
+              data-caption="Sello de la serie: Reuel 2022, pieza 208 de 365">
+              <img class="gallery__img" src="assets/img/content/detalle-sello-reuel.webp"
+                alt="Esquina del cartel con el sello «Reuel 2022, 208 of 365» junto a las letras ECT"
+                width="800" height="800" loading="lazy" decoding="async">
+            </button>
+          </li>
+        </ul>
+
+        <p class="credit">
+          Las cinco piezas son recortes de un mismo cartel de <strong>Reuel</strong> (@reuel.dsgn),
+          usado aquí como material de muestra. La autoría es suya.
+        </p>
       </div>
-      <div class="dropdown">
-        <button class="button">
-          Soporte
-          <img src="IMG/chev.svg" />
-        </button>
-        <div class="dropdown-menu">
-          <button>Chat</button>
-          <button>Email</button>
-          <button>Nuestras redes</button>
-        </div>
-      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__note">
+        DYEL es una demo de interfaz: HTML, CSS y JavaScript sin dependencias ni compilación.
+        No hay servidor, base de datos ni cuentas reales.
+      </p>
+      <ul class="site-footer__links">
+        <li><a href="https://github.com/pabloWIB/DYEL-Form" rel="noopener">Repositorio en GitHub</a></li>
+        <li><a href="https://wib.digital" rel="noopener">wib.digital</a></li>
+      </ul>
+      <p class="site-footer__author">Pablo Nieto Pérez</p>
     </div>
-  </nav>
-  <section class="DisplaySM">
-    <div>
-      <img class="img1" src="ICONOS/facebook.svg" alt="">
-    </div>
-    <div>
-      <img class="img1" src="ICONOS/whatsapp.svg" alt="">
-    </div>
-    <div>
-      <img class="img1" src="ICONOS/twitter.svg" alt="">
-    </div>
-    <div>
-      <img class="img1" src="ICONOS/tiktok.svg" alt="">
-    </div>
-  </section>
-  <div class="SpaceBetween"></div>
-  <div class="parent-div">
-    <div class="content-contenedor-iniciar">
-      <figure><img class="reductionIMG1" onclick="IMGbig();" src="IMG/BUHO.jpg"></figure>
-      <h1 class="title">DYEL</h1>
-      <section class="placing">
-        <button class="buttons" onclick="toggleModalIngresar();" type="button">INGRESAR</button>
-        <button class="buttons" onclick="toggleModalRegistrar();" type="button">REGISTRARSE</button>
-      </section>
-    </div>
-    <div class="content-div">
-      <hgroup>
-        <h3>DYEL</h3>
-        <h4>Iniciar Sesión</h4>
-      </hgroup>
-      <form class="form-information">
-        <input type="Email" name="email" placeholder=" Ingresa tu Correo" maxlength="15" required>
-        <input type="password" name="password" placeholder=" Ingreas tu Contraseña" maxlength="15" required>
-        <input type="submit" name="enviar">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-      </form>
-      <section class="place-regresar">
-        <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalIngresar();"
-          type="button">REGRESAR</button>
-      </section>
-    </div>
-    <div class="content2-div">
-      <br>
-      <form>
-        <hgroup>
-          <h3>DYEL</h3>
-          <h4>Crea tu Cuenta</h4>
-        </hgroup>
-        <form class="form-information">
-          <input type="Email" name="email" placeholder=" Agrega tu Correo" maxlength="15" required>
-          <input type="password" name="password" placeholder=" Agrega tu Contraseña" maxlength="15" required>
-          <input type="tel" name="Telefóno" placeholder=" Agrega tu teléfono" maxlength="9" required><br><br>
-          <input type="submit" name="enviar">
-        </form>
-        <section class="place-regresar">
-          <button class="button-regresar" onmouseover="delineText();" onclick="toggleModalRegistrar();"
-            type="button">REGRESAR</button>
-        </section>
-    </div>
-  </div>
-  <div class="SpaceBetween"></div>
-  <div class="Cont-imgs">
-    <div>
-      <figure class="Positions-first" onclick="toggleModalExpandir();"><img class="reductionContent Hover"
-          src="IMG/1.jpg"></figure>
-      <figcaption>"It can be joy or sorrow, but either way. you have to be prepared"</figcaption>
-    </div>
-  </div>
-  <div class="Cont-imgs2">
-    <div>
-      <figure onclick="toggleModalExpandir();" class="Positions-second"><img class="reductionContent " src="IMG/3.jpg">
-      </figure>
-    </div>
-  </div>
-  <div class="Cont-imgs3">
-    <div>
-      <figure class="Positions-first2" onclick="toggleModalExpandir2();"><img class="reductionContent Hover"
-          src="IMG/4.jpg"></figure>
-      <figcaption>"Unexpected, Always be prepared."</figcaption>
-    </div>
-  </div>
-  <div class="Cont-imgs4">
-    <div>
-      <figure onclick="toggleModalExpandir2();" class="Positions-second2"><img class="reductionContent "
-          src="IMG/5.jpg"></figure>
-    </div>
-  </div>
-  <div class="Cont-imgs4">
-    <div>
-      <figure class="Positions-first3" onclick="toggleModalExpandir3();"><img class="reductionContent Hover"
-          src="IMG/6.jpg"></figure>
-      <figcaption>"Do not be surprised by an unusual event. Anything could happen, and probably will"</figcaption>
-    </div>
-  </div>
-  <div class="Cont-imgs5">
-    <div>
-      <figure onclick="toggleModalExpandir3();" class="Positions-second3"><img class="reductionContent" src="IMG/1.jpg">
-      </figure>
-    </div>
-  </div>
-  <script type="text/javascript">
-    const toggleModalIngresar = () => document.body.classList.toggle("open");
-    const toggleModalRegistrar = () => document.body.classList.toggle("openRe")
-    const delineText = () => document.body.classList.toggle("Deline")
-    const IMGbig = () => document.body.classList.toggle("IMGbig")
-    const toggleModalExpandir = () => document.body.classList.toggle("open01");
-    const toggleModalExpandir2 = () => document.body.classList.toggle("open2");
-    const toggleModalExpandir3 = () => document.body.classList.toggle("open3");
-    const toggleMenu = () => document.body.classList.toggle("openNav");
-  </script>
+    <p class="site-credit">
+      Built by <a href="https://wib.digital" rel="noopener">wib.digital</a> —
+      <a href="https://www.fiverr.com/pablonietop" rel="noopener">hire me on Fiverr</a>
+    </p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightbox-img" src="assets/img/content/cartel-expect-the-unexpected.webp"
+        alt="" width="1200" height="1200" loading="lazy" decoding="async">
+      <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__close" type="button" id="lightbox-close" aria-label="Cerrar la imagen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 5l14 14M19 5L5 19" />
+      </svg>
+    </button>
+  </dialog>
 </body>
 
 </html>
